@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import * as todoAction from './actions/todos';
+import {Creators as todoAction} from './ducks/todos';
 
 class TodoList extends Component {
     constructor(props) {
@@ -33,7 +33,7 @@ class TodoList extends Component {
                     type="text"
                     value={this.state.newTodoText}
                     onChange={(e) => this.setState({newTodoText: e.target.value})}
-                 />                
+                />                
                 <button onClick={this.addNewTodo}>Novo todo</button>
             </div>
         );
